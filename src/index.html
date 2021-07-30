@@ -1,32 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="format-detection" content="telephone=no">
-    <!-- SEO -->
-    <title>GULP PROJECT</title>
-    <meta name="description" content="Описание сайта для поисковиков, рекомендуемый размер от 70 до 140 символов">
-    <meta name="keywords" content="ключевые, слова, через, запятую (рекомендованное количество слов в данном теге — 5-10)">
-    <!-- Favicon -->
-    <!-- OG -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Название страницы, максимум 70 символов">
-    <meta property="og:description" content="Описание, до 200 символов">
-    <meta property="og:image" content="img/og/poster.png">
-    <meta property="og:url" content="Ссылка на текущую страницу (http://www.site-name.com/current-page)">
-    <meta property="og:site_name" content="GULP PROJECT">
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header class="main-header">
-        <div class="container">
-            <img src="img/base/gulp.svg" width="120" height="265" alt="">
-        </div>
-    </header><!-- / .main-header -->
-</body>
+    <head>
+        <!-- Meta -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- SEO -->
+        <title>GULP PROJECT</title>
+        <meta
+            name="description"
+            content="Описание сайта для поисковиков, рекомендуемый размер от 70 до 140 символов"
+        />
+        <meta
+            name="keywords"
+            content="ключевые, слова, через, запятую (рекомендованное количество слов в данном теге — 5-10)"
+        />
+        <!-- Favicon -->
+        <!-- OG -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:title"
+            content="Название страницы, максимум 70 символов"
+        />
+        <meta property="og:description" content="Описание, до 200 символов" />
+        <meta property="og:image" content="img/og/poster.png" />
+        <meta
+            property="og:url"
+            content="Ссылка на текущую страницу (http://www.site-name.com/current-page)"
+        />
+        <meta property="og:site_name" content="GULP PROJECT" />
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header__firstline">
+                    <div class="logo-container">
+                        <img src="./img/base/logo.svg" alt="logo header" />
+                    </div>
+                    <div class="search-panel">
+                        <form>
+                            <input type="text" placeholder="Поиск по сайту" />
+                            <button type="submit"></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="nav-container-min">
+                    <input id="toggle" type="checkbox" />
+                    <label class="toggle-container" for="toggle">
+                        <span class="button button-toggle"></span>
+                    </label>
+                    <nav class="nav">
+                        <a
+                            rel="nofollow"
+                            rel="noreferrer"
+                            class="nav-item"
+                            href=""
+                            >О компании</a
+                        >
+                        <a
+                            rel="nofollow"
+                            rel="noreferrer"
+                            class="nav-item"
+                            href=""
+                            >услуги</a
+                        >
+                        <a
+                            rel="nofollow"
+                            rel="noreferrer"
+                            class="nav-item"
+                            href=""
+                            >объекты</a
+                        >
+                        <a
+                            rel="nofollow"
+                            rel="noreferrer"
+                            class="nav-item"
+                            href=""
+                            >закупки</a
+                        >
+                        <a
+                            rel="nofollow"
+                            rel="noreferrer"
+                            class="nav-item"
+                            href=""
+                            >партнеры</a
+                        >
+                        <a
+                            rel="nofollow"
+                            rel="noreferrer"
+                            class="nav-item"
+                            href=""
+                            >новости</a
+                        >
+                        <a
+                            rel="nofollow"
+                            rel="noreferrer"
+                            class="nav-item"
+                            href=""
+                            >контакты</a
+                        >
+                    </nav>
+                </div>
+                <nav class="nav-container">
+                    <a rel="nofollow" rel="noreferrer" href="">О компании</a>
+                    <a rel="nofollow" rel="noreferrer" href="">услуги</a>
+                    <a rel="nofollow" rel="noreferrer" href="">объекты</a>
+                    <a rel="nofollow" rel="noreferrer" href="">закупки</a>
+                    <a rel="nofollow" rel="noreferrer" href="">партнеры</a>
+                    <a rel="nofollow" rel="noreferrer" href="">новости</a>
+                    <a rel="nofollow" rel="noreferrer" href="">контакты</a>
+                </nav>
+            </div>
+        </header>
+        <maim class="container">
+            <section class="section">
+                <div class="main-slider">
+                    <div class="main-slider__item">
+                        <img src="./img/base/pexels-marc.png" alt="img" />
+                    </div>
+                    <div class="main-slider__item">
+                        <img src="./img/base/pexels-marc.png" alt="img" />
+                    </div>
+                    <div class="main-slider__item">
+                        <img src="./img/base/pexels-marc.png" alt="img" />
+                    </div>
+                    <div class="main-slider__item">
+                        <img src="./img/base/pexels-marc.png" alt="img" />
+                    </div>
+                    <div class="main-slider__item">
+                        <img src="./img/base/pexels-marc.png" alt="img" />
+                    </div>
+                </div>
+            </section>
+        </maim>
+        <footer class="footer container"></footer>
+        <script src="">
+    </body>
 </html>
