@@ -1,0 +1,14 @@
+.footer {
+    margin-bottom: 170px;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border-bottom: 1px solid $light-gray;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+    }
+}
