@@ -1,14 +1,46 @@
 .footer {
-    margin-bottom: 170px;
+    margin-bottom: 20px;
 }
 .footer-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     border-bottom: 1px solid $light-gray;
     div {
+        width: 91%;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 120px;
+        height: 5vw;
+        &:hover {
+            background-color: $light-gray;
+            span {
+                text-decoration: underline;
+            }
+        }
+        a{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.4vw;
+        }
+        img {
+            position: inline-block;
+            width: 3vw;
+        }
+        span {
+            font-size:0.8vw;
+            color: $midle-gray;
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+    .footer-container {
+        width: 35vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 }

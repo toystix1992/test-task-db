@@ -40,7 +40,7 @@ export const html = () => {
 
 // Fonts
 export const fonts = () => {
-    return gulp.src('src/fonts/*.{woff,woff2}')
+    return gulp.src('src/fonts/*.{woff,woff2,ttf}')
         .pipe(gulp.dest('build/fonts'));
 }
 

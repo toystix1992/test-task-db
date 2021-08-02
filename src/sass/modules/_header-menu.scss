@@ -1,8 +1,8 @@
 .nav-container-min {
     display: none;
     position: relative;
-    margin: 35px auto 0;
-    width: 300px;
+    margin: 5px auto 0;
+    width: 160px;
     overflow: hidden;
 }
 
@@ -39,15 +39,15 @@
         inset 0 0 0 20px rgba(0, 0, 0, 0.1);
 }
 #toggle:checked ~ .nav {
-    margin-bottom: 100px;
+    margin-bottom: 15px;
     pointer-events: auto;
-    transform: translate(50px, 50px);
+    transform: translate(10px, 10px);
 }
 #toggle:checked ~ .nav .nav-item {
-    color: #ec7263;
+    color: $brownte;
     letter-spacing: 0;
-    height: 40px;
-    line-height: 40px;
+    height: 35px;
+    line-height: 50px;
     margin-top: 0;
     opacity: 1;
     transform: scaleY(1);
@@ -91,8 +91,8 @@
 .button-toggle {
     position: absolute;
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin: 25px;
     background-color: transparent;
     border: none;
@@ -108,7 +108,7 @@
 .button-toggle:after {
     position: absolute;
     content: "";
-    top: 50%;
+    top: 0;
     left: 0;
     width: 100%;
     height: 2px;
@@ -126,7 +126,7 @@
 /* Меню */
 .nav {
     display: inline-block;
-    margin: 25px 25px 20px;
+    margin: 20px 20px 15px;
     pointer-events: none;
     transition: 0.5s;
 }
@@ -191,4 +191,46 @@
     background-color: #ec7263;
     transform: translateY(-50%) scaleY(5);
     transition: 0.5s;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10.2%;
+        height: 3.1vw;
+        &:hover {
+            background-color: $brownte;
+            color: $white;
+            border: 1px solid $white;
+            a{
+                color: $white;
+            }
+        }
+        &:active {
+            background-color: $midle-gray;
+            color: $white;
+            border: 1px solid $white;
+            a{
+                color: $white;
+            }
+        }
+        a{
+            @include font-normal();
+            color: $midle-gray;
+            font-size: 0.95vw;;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-container {
+        display: none;
+    }
+    .nav-container-min {
+        display: block;
+    }
 }

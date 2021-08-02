@@ -1,5 +1,7 @@
 .section {
     position: relative;
+    max-width: 2560px;
+    margin: 0 auto;
 }
 .main-slider {
     position: relative;
@@ -8,17 +10,45 @@
 .main-slider__item {
     position: relative;
     text-align: center;
-    width: 100%;
+    margin: 0 auto;
 }
-.main-slider__item  p {
+.main-slider__discription {
     position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 80px;
+    width: 34vw;
+    top: 6.8vw;
+    left: 18.4vw;
     z-index: 10;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12vw;
+        height: 2.05vw;
+        background-color: $brownte;
+        a {
+            @include font-normal();
+            color: $white;
+            font-size: 0.8vw;
+        }
+    }
+    h1 {
+        @include font-bold();
+        color: $white;
+        text-align: start;
+        font-size: 3.3vw;
+        margin: 0.8vw 0;
+    }
+    p {
+        @include font-normal();
+        color: $white;
+        text-align: left;
+        font-size: 1.13vw;
+        line-height: 1.4vw;
+    }
 }
 .main-slider__item img {
     height: 100%;
+    margin: 0 auto;
 }
 
 .main-slider .slick-track {
@@ -27,14 +57,20 @@
 }
 /* Точки (булиты) */
 .main-slider .slick-dots {
-    position: relative;
-    margin-top: -60px;
+    position: absolute;
+    z-index: 30;
+    top: 88%;
+    left: 43.1%;
     display: flex;
     justify-content: center;
+    gap: 0.6rem;
 }
 .main-slider .slick-dots li {
+    position: relative;
+    overflow: hidden;
     list-style: none;
-    margin: 0 10px;
+    height: 0.55rem;
+    width: 0.55rem;
 }
 /* Активная точка */
 .main-slider .slick-dots li.slick-active button {
@@ -43,13 +79,105 @@
 }
 /* Элемент точки */
 .main-slider .slick-dots li button {
+    position: absolute;
     font-size: 0;
-    height: 12px;
+    height:100%;
     border-style: none;
-    border: 1px solid $white;
     background: none;
+    border: 1px solid $white;
     &:hover {
         background-color: $white;
     }
+}
 
+
+@media (max-width: 992px) {
+    .main-slider .slick-dots {
+        position: absolute;
+        z-index: 30;
+        top: 84%;
+        left: 43.1%;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        li {
+            position: relative;
+            overflow: hidden;
+            list-style: none;
+            height: 0.5rem;
+            width: 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main-slider .slick-dots {
+        position: absolute;
+        z-index: 30;
+        top: 81%;
+        left: 43.1%;
+        display: flex;
+        justify-content: center;
+        gap: 0.46rem;
+        li {
+            position: relative;
+            overflow: hidden;
+            list-style: none;
+            height: 0.5rem;
+            width: 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .main-slider__discription {
+        position: absolute;
+        width: 43vw;
+        top: 6.8vw;
+        left: 38.4vw;
+        z-index: 10;
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 12vw;
+            height: 2.05vw;
+            background-color: $brownte;
+            a {
+                @include font-normal();
+                color: $white;
+                font-size: 0.8vw;
+            }
+        }
+        h1 {
+            @include font-bold();
+            color: $white;
+            text-align: start;
+            font-size: 3.3vw;
+            margin: 0.8vw 0;
+        }
+        p {
+            @include font-normal();
+            color: $white;
+            text-align: left;
+            font-size: 1.13vw;
+            line-height: 1.4vw;
+        }
+    }
+    .main-slider .slick-dots {
+        position: absolute;
+        z-index: 30;
+        top: 73%;
+        left: 33.1%;
+        display: flex;
+        justify-content: center;
+        gap: 0.46rem;
+        li {
+            position: relative;
+            overflow: hidden;
+            list-style: none;
+            height: 0.5rem;
+            width: 0.5rem;
+        }
+    }
 }

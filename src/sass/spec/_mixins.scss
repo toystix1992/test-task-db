@@ -21,3 +21,14 @@
         }
     }
 }
+
+@mixin font-bold {
+    font-family: 'Museo Sans Cyrl';
+    font-weight: 700;
+    font-style: normal;
+}
+@mixin font-normal {
+    font-family: 'Museo Sans Cyrl';
+    font-weight: 500;
+    font-style: normal;
+}

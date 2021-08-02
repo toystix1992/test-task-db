@@ -1,35 +1,61 @@
 .header__firstline {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid $black;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $light-gray;
     .logo-container {
         width: 15vw;
     }
 }
 
 .search-panel {
+    width: 29vw;
+    margin-top: 6px;
     form {
         display: flex;
         justify-content: center;
+        align-items: flex-end;
         input {
-            width: 557px;
-            height: 50px;
+            width: 80%;
+            height: 2.6vw;
+            padding: 0 4%;
             background-color: $light-gray;
             border:none;
-        }
-        button {
-            width: 70px;
-            height: 50px;
-            background-color: $light-gray;
-            border:none;
-            &::after {
-                content: " ";
-                background: url("../img/base/search-icon.svg") no-repeat;
-                background-position: center center;
-                width: 100%;
-                height: 100%;
-                display: inline-block;
+            &::placeholder {
+                font-family: Museo Sans Cyrl;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 50%;
             }
         }
+        button {
+            width: 20%;
+            height: 2.6vw;
+            background-color: $light-gray;
+            border:none;
+            // padding: 1% 3%;
+            &::after {
+                display: block;
+                content: "";
+                background: no-repeat right /33% url("../img/base/search-icon.svg");
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .header__firstline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo-container {
+        width: 40vw;
+    }
+    .search-panel {
+        width: 30vw;
     }
 }
